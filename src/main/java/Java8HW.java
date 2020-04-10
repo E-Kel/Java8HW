@@ -16,7 +16,7 @@ public class Java8HW {
                 " and have exactly 3 letters: \n " +
                 ""+filterStartWithAAndThreeLettersInString(strList));
         LOGGER.info("The list"+ intList+" is modified with the format to \n"+
-                addCommaAndAddSymbolsToOddAndEvenPartsOfNumber(intList));
+                addCommaAndAddcharactersToOddAndEvenNumbers(intList));
         LOGGER.info("The amount of numbers which ON MODULE more than 50 in the list: \n"+intList+ "\n is:"+filterAbs50(intList));
 
     }
@@ -26,7 +26,7 @@ public class Java8HW {
             .filter(str -> str.length() == 3 && str.startsWith("a"))
                 .collect(Collectors.toList());
     }
-    private static String addCommaAndAddSymbolsToOddAndEvenPartsOfNumber(List<Integer> arr){
+    private static String addCommaAndAddcharactersToOddAndEvenNumbers(List<Integer> arr){
         return arr.stream()
         .map(num -> (num % 2) == 0 ? "e" + num : "o" + num)
                 .collect(Collectors.joining(","));
