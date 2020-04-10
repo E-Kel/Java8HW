@@ -12,7 +12,7 @@ public class Java8HW {
         for(int i = -100; i <101 ; i+=3) intList.add(i);
         Collections.shuffle(intList);
 
-        LOGGER.info("The list"+ strList+" is filtered by elements that start with the letter 'a' (lower case)" +
+        LOGGER.info("The list"+ strList+"\n is filtered by elements that start with the letter 'a'" +
                 " and have exactly 3 letters: \n " +
                 ""+filterStartWithAAndThreeLettersInString(strList));
         LOGGER.info("The list"+ intList+" is modified with the format to \n"+
