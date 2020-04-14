@@ -7,7 +7,29 @@ public class Java8HW {
     static Logger LOGGER = Logger.getLogger(Java8HW.class.getName());
 
     public static void main(String[] args) {
-        List<String> strList = Arrays.asList("animal", "aan", "abn", "axn");
+        List<String> strList = Arrays.asList(
+                "animal",
+                "aan",
+                "abn",
+                "123",
+                "a5!",
+                "ban",
+                "banana",
+                "",
+                " ",
+                "a",
+                "a  ",
+                "a~\n",
+                " a ",
+                "az",
+                "mna",
+                "aфв",
+                "aiв",
+                "al$",
+                "a@4",
+                "a@4 ",
+                "фвыыxn");
+        Collections.shuffle(strList);
         List<Integer> intList = new ArrayList<Integer>();
         for (int i = -100; i < 101; i += 3) intList.add(i);
         Collections.shuffle(intList);
@@ -33,8 +55,8 @@ public class Java8HW {
                 .collect(Collectors.joining(","));
     }
 
-    private static int filterAbs50(List<Integer> arr) {
-        return (int) arr.stream()
+    private static long filterAbs50(List<Integer> arr) {
+        return arr.stream()
                 .filter(num -> Math.abs(num) > 50)
                 .count();
     }
