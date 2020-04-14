@@ -30,7 +30,7 @@ public class Java8HW {
                 "a@4 ",
                 "фвыыxn");
         Collections.shuffle(strList);
-        List<Integer> intList = new ArrayList<Integer>();
+        List<Integer> intList = new ArrayList<>();
         for (int i = -100; i < 101; i += 3) intList.add(i);
         Collections.shuffle(intList);
 
